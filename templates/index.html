@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulated Annealing Optimizer</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <!-- Optional: Include Bootstrap for better styling -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="text-center mb-4">
+        <h1 class="display-4">Simulated Annealing Optimizer</h1>
+        <p class="lead">Kelompok 5 <br />Untuk desain tata letak pabrik</p>
+      </div>
+      <form id="saForm" class="p-4 shadow rounded bg-light">
+        <div class="mb-3">
+          <label for="flowMatrix" class="form-label"
+            >Flow Matrix [[0, 5, 2, 4], [5, 0, 3, 6], [2, 3, 0, 1], [4, 6, 1,
+            0]]</label
+          >
+          <textarea
+            class="form-control"
+            id="flowMatrix"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="deptSizes" class="form-label"
+            >Department Sizes [[11, 5], [8, 6], [6, 7], [5, 5]]</label
+          >
+          <textarea
+            class="form-control"
+            id="deptSizes"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="areaSize" class="form-label"
+            >Area Size (width, height)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="areaSize"
+            placeholder="e.g., 20,20"
+            required
+          />
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label for="T_init" class="form-label">Initial Temperature</label>
+            <input
+              type="number"
+              class="form-control"
+              id="T_init"
+              placeholder="e.g., 1000"
+              required
+            />
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="coolingRate" class="form-label">Cooling Rate</label>
+            <input
+              type="number"
+              class="form-control"
+              id="coolingRate"
+              placeholder="e.g., 0.95"
+              step="0.01"
+              required
+            />
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="maxIter" class="form-label">Max Iterations</label>
+            <input
+              type="number"
+              class="form-control"
+              id="maxIter"
+              placeholder="e.g., 1000"
+              required
+            />
+          </div>
+        </div>
+        <div id="result" class="mt-5 text-center">
+          <!-- Results will be displayed here -->
+        </div>
+        <button type="submit" class="btn btn-primary w-100">
+          Run Simulation
+        </button>
+      </form>
+    </div>
+    <script src="/static/script.js"></script>
+    <!-- Optional: Include Bootstrap JavaScript for dynamic components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

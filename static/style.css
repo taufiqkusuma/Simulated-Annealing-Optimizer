@@ -1,0 +1,57 @@
+/* Style for the body */
+body {
+  background-color: #f8f9fa; /* Light gray background */
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center container */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Form Styling */
+form {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form inputs */
+textarea,
+input,
+button {
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Result box */
+#result {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Add some space between labels and inputs */
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Add responsive layout */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-md-4 {
+    width: 100%;
+  }
+}
